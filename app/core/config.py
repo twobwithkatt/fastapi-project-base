@@ -27,6 +27,12 @@ class Settings(BaseSettings):
     HOST: str = 'localhost'
     PORT: int = 8002
 
+    JWT_SECRET_KEY: str
+    JWT_ALGORITHM: str = 'HS256'
+    JWT_EXPIRE_MINUTES: int = 60 * 24 * 1
+    ADMIN_PASSWORD: str 
+    
+    
     class Config:
         env_file = os.path.join(BASE_DIR, '.env')
         env_file_encoding = 'utf-8'

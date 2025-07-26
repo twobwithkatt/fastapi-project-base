@@ -8,9 +8,12 @@ from sqlalchemy import pool
 from alembic import context
 
 from app.core.config import build_db_url
-from app.models.base import BareBaseModel, BaseModel
+from app.models.base import BareBaseModel, ORMBase
 from app.models.categories import Category
 from app.models.posts import Post
+from app.models.tags import Tag
+from app.models.posts_tags import PostsTags
+from app.models.user import User
 
 sys.path.append(os.path.abspath(os.path.join(os.getcwd())))
 
